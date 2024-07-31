@@ -40,6 +40,16 @@ class LinkedList {
     }
     return currentNode;
   }
+
+  pop() {
+    let previousNode;
+    let currentNode = this.head;
+    while (currentNode.pointer != null) {
+      previousNode = currentNode;
+      currentNode = currentNode.pointer;
+    }
+    previousNode.pointer = null;
+  }
 }
 
 class Node {
