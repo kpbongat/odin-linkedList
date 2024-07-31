@@ -3,7 +3,7 @@ class LinkedList {
 }
 
 class Node {
-  pointer;
+  pointer = null;
   constructor(value) {
     this.value = value;
   }
