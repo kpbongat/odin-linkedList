@@ -32,6 +32,14 @@ class LinkedList {
       this.size = this.size + 1;
     }
   }
+
+  at(index) {
+    let currentNode = this.head;
+    for (let i = 0; i < index; i++) {
+      currentNode = currentNode.pointer;
+    }
+    return currentNode;
+  }
 }
 
 class Node {
@@ -40,6 +48,3 @@ class Node {
     this.value = value;
   }
 }
-
-const linkedList = new LinkedList();
-console.log(linkedList.size);
