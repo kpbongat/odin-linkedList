@@ -50,6 +50,19 @@ class LinkedList {
     }
     previousNode.pointer = null;
   }
+
+  contains(value) {
+    let found = false;
+    let currentNode = this.head;
+    do {
+      if (currentNode.value === value) {
+        found = true;
+        break;
+      }
+      currentNode = currentNode.pointer;
+    } while (currentNode != null);
+    return found;
+  }
 }
 
 class Node {
