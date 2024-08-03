@@ -54,6 +54,7 @@ class LinkedList {
       this.head = null;
       this.tail = null;
     }
+    this.size = this.size - 1;
   }
 
   contains(value) {
