@@ -79,6 +79,17 @@ class LinkedList {
       currentNode = currentNode.pointer;
     }
   }
+
+  toString() {
+    let string = "";
+    let currentNode = this.head;
+    do {
+      string = string + `(${currentNode.value}) => `;
+      currentNode = currentNode.pointer;
+    } while (currentNode != null);
+    string = string + "null";
+    return string;
+  }
 }
 
 class Node {
