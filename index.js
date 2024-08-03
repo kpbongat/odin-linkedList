@@ -48,7 +48,12 @@ class LinkedList {
       previousNode = currentNode;
       currentNode = currentNode.pointer;
     }
-    previousNode.pointer = null;
+    if (this.size > 1) {
+      previousNode.pointer = null;
+    } else {
+      this.head = null;
+      this.tail = null;
+    }
   }
 
   contains(value) {
